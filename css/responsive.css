@@ -1,0 +1,474 @@
+@media (max-width:800px) {
+    :root {
+        --mainColor: #FAD1C2;
+        --hoverColor: #E06D5C;
+        --reservationColor: #FF9494;
+        --mainTextColor: #000000;
+        --subTextColor: #333333;
+        --border-radius: 20px;
+        --title_Content_Fs: 40px;
+        --siteTitle_FZ: 30px;
+        --siteSubTitle_FZ: 20px;
+        --subTitle_Fs: 15px;
+
+        --font-Pretendard: "Pretendard-Regular";
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 반응형 켜주기*/
+    .top_Mobile {
+        display: block;
+    }
+
+    .mobile_mainVisual_inner {
+        display: block;
+    }
+
+    .mobile_footer {
+        display: block;
+    }
+
+    /* 공통*/
+    body {}
+
+    .inner {
+        width: 100vw;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .sideBar {
+        display: none !important;
+    }
+
+    header .top,
+    header .header_Wraps {
+        display: none;
+    }
+
+    .top_Mobile {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    .top_Mobile .menu {
+        width: 75px;
+        height: 75px;
+        text-align: center;
+        line-height: 75px;
+        background-color: rgb(255, 230, 230);
+
+        position: relative;
+    }
+
+
+    .top_Mobile img {
+        object-fit: contain;
+    }
+
+    .close_Btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: none;
+    }
+
+    .close_Btn.active {
+        display: block;
+    }
+
+    /* mainVisual_inner */
+    main .mainVisual_inner {
+        width: 100%;
+    }
+
+    /* 모바일 메뉴 아코디언 */
+    .mobile_Wraps {
+        display: block;
+        z-index: 10;
+        transition: 5s;
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        transition: .3s;
+    }
+
+    .mobile_Wraps.active {
+        left: 0;
+    }
+
+    .mobile_Wraps .gnb {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        background-color: white;
+        z-index: 5;
+        background-color: var(--mainColor);
+    }
+
+    .mobile_Wraps .m_menuAll {
+        position: relative;
+        width: 30%;
+        
+    }
+
+    .mobile_Wraps .gnb .INB {
+        display: inline-block;
+        width: 100%;
+
+    }
+
+    .mobile_Wraps .gnb .INB a {
+        padding: 10px;
+        background-color: var(--mainColor);
+        display: block;
+
+    }
+
+    .mobile_Wraps .gnb .INB a:hover {
+        color:var(--hoverColor);
+
+    }
+
+
+    .mobile_Wraps .gnb .subMenuAll {
+        width: 80%;
+        right: 10px;
+        height: 100%;
+    }
+    
+    
+    
+    .mobile_Wraps .gnb .subMenuAll .submenu {
+        display: none;
+    }
+    
+    .mobile_Wraps .gnb .subMenuAll .submenu.active {
+        display: block;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul {
+        /* border: 10px solid rgb(143, 0, 0); */
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu ul li {
+        /* border: 1px solid rgb(121, 145, 0); */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu ul li a {
+        background-color: var(--reservationColor);
+        font-family: var(--font-Pretendard);
+        font-size: var(--siteSubTitle_FZ);
+        padding: 12.5px;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu ul li a:hover {
+        color: white
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li .subMenuu {
+        /* border: 1px solid rgb(6, 85, 142); */
+        display: none;
+
+
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li .subMenuu.active {
+        width: 100%;
+        display: block;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li .subMenuu.anyday_active {
+        width: 100%;
+        display: block;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li .subMenuu ul {
+        /* border: 10px solid rgb(29, 11, 168); */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu ul li a .subMenuu ul li {
+        border: 1px solid rgb(108, 6, 109);
+    }
+
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li>.subMenuu ul li a {
+        border: 1px solid rgb(87, 87, 87);
+        background-color: white;
+        padding: 10px;
+    }
+    .mobile_Wraps .gnb .subMenuAll .submenu>ul>li>.subMenuu ul li a:hover {
+       color: var(--hoverColor);
+    }
+
+    /*예약 아이콘*/
+    .mainVisual_Warp {
+        display: none;
+    }
+
+    .mobile_mainVisual_inner {
+        width: 100%;
+    }
+
+    .mobile_mainVisual_inner>img {
+        width: 100%;
+    }
+
+    ._mobile_reservation_warp {
+        position: relative;
+        width: 100%;
+    }
+
+    ._mobile_reservation_warp::after {
+        position: absolute;
+        content: "예약바로가기";
+        border: 1px solid #FF9494;
+        left: 50%;
+        top: -76px;
+        transform: translateX(-50%);
+        width: 247px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        border-radius: 100px;
+        background-color: white;
+    }
+
+    ._mobile_reservation_warp .iconWarp1 {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    ._mobile_reservation_warp .iconWarp2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    ._mobile_reservation_warp .iconWarp1 p,
+    ._mobile_reservation_warp .iconWarp2 p {
+        text-align: center;
+
+    }
+
+    ._mobile_reservation_warp .iconWarp1 a,
+    ._mobile_reservation_warp .iconWarp2 a {
+        transition: .3s;
+        padding: 10px;
+
+    }
+
+    ._mobile_reservation_warp .iconWarp1 a img,
+    ._mobile_reservation_warp .iconWarp2 a img {
+        width: 100%;
+
+    }
+
+    ._mobile_reservation_warp .iconWarp1 a:hover,
+    ._mobile_reservation_warp .iconWarp2 a:hover {
+        color: #FF9494;
+        transform: translateY(-10px);
+
+    }
+
+    .reservation_IconWraps {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+
+
+    main .reservation_warp .icon {
+        width: 100%;
+    }
+
+    main .reservation_warp .icon span {
+        display: none;
+    }
+
+
+    main .gallery_warps {
+        width: 100%;
+    }
+
+    main .gallery .swiper-wrapper {
+        width: 100%;
+    }
+
+
+    main .gallery_warps .swiper-slide {}
+
+
+    /* 게시판 */
+    main .info_Inner {
+        width: 100%;
+    }
+
+    .info_Warps {
+        display: block;
+    }
+
+    .info_1 .item {
+        margin-bottom: 100px;
+    }
+
+
+    main .title_Content {}
+
+
+
+    /* Story_inner */
+    .Story_inner {
+        width: 100%;
+
+    }
+
+    .Story_inner .cardwraps {
+        width: 90%;
+    }
+
+    .Story_inner .cardwraps .swiper-slide {}
+
+    .Story_inner .cardwraps .swiper-slide-active {}
+
+    .Story_inner .cardwraps .swiper-slide a {}
+
+    .Story_inner .cardwraps .swiper-slide a img {}
+
+    .Story_inner .cardwraps .swiper-slide a .textWarp {}
+
+
+    /* OtherSite_inner */
+    .OtherSite_inner {
+        width: 100%;
+    }
+
+    .OtherSite_inner .textWarps {
+        display: none;
+    }
+
+    .OtherSite_inner .sites {}
+
+    .OtherSite_inner .sites a {
+        width: 100%;
+    }
+
+    .OtherSite_inner .sites img {
+        object-fit: cover;
+        width: 100%;
+        object-position: center;
+    }
+
+    /* sidebar */
+    .mobile_sideBar {
+        position: relative;
+
+        position: fixed;
+        right: 55px;
+        top: 90%;
+        background-color: var(--mainColor);
+        border-radius: var(--border-radius);
+        text-align: center;
+        z-index: 100;
+
+    }
+
+    .mobile_sideBar:hover {
+        color: white;
+        background-color: var(--hoverColor);
+    }
+
+
+    .sideBar_items {
+       border: 1px solid #000;
+       position: absolute;
+        transition: .5s;
+        left: 50px;
+        height: 0;
+        top: -10px;
+        width: 100%;
+        opacity: 0;
+    }
+
+    
+    .sideBar_items.active {
+        opacity: 1;
+        left: 50px;
+        height: 320px;
+        top: -180px;
+
+    }
+
+
+    /*모바일 사이드바*/
+    .sideBar_items {
+        border: 1px solid rgb(194, 77, 77);
+    }
+
+    .sideBar_item {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .sideBar_item a {
+        padding: 10px;
+
+    }
+
+    .sideBar_item img {
+        width: 90% !important;
+        transition: .3s;
+    }
+
+    .sideBar_item a:hover {
+        width: 110% !important;
+    }
+
+    /*footer*/
+    .footer {
+        display: none;
+    }
+    .mobile_textwarp ul li{
+        width: 100%;
+    }
+    .mobile_textwarp ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img_Warps {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img_Warps a img {
+        height: 40px;
+    }
+
+    .mobile_footer {
+        background-color: var(--mainColor);
+
+    }
+
+    .mobile_footer div {
+        padding: 10px;
+    }
+
+    .mobile_footer>p {
+        text-align: center;
+        font-size: 15px;
+        font-family: var(--font-Pretendard);
+
+    }
+}

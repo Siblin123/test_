@@ -1,0 +1,176 @@
+$mainColor: #FAD1C2;
+$hoverColor: #E06D5C;
+$reservationColor: #FF9494;
+$mainTextColor: #000000;
+$subTextColor: #333333;
+$border-radius: 20px;
+$title_Content_Fs: 40px;
+$siteTitle_FZ: 30px;
+$siteSubTitle_FZ: 20px;
+$subTitle_Fs: 15px;
+
+
+* {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.inner {
+  margin: auto;
+  width: 400px;
+}
+
+.header {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 150px;
+  }
+
+  .tap {
+
+    display: flex;
+    gap: 10px;
+    height: 40px;
+    width: 100%;
+
+    a {
+      position: relative;
+      width: 100%;
+
+      &.active::after {
+        position: absolute;
+        content: "";
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        border: 1px solid rgb(238, 7, 7);
+
+      }
+
+      &:hover {
+        color: $hoverColor;
+      }
+    }
+
+    margin-bottom: 10px;
+  }
+}
+
+.login_Menu {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  .id,
+  .password {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .keepLoggedIn {
+    margin-bottom: 10px;
+
+    :hover {
+      color: $hoverColor;
+    }
+  }
+
+  .login_Btn {
+    border: 1px solid #000;
+
+    button {
+      width: 100%;
+      border: none;
+      height: 40px;
+
+      &:hover {
+        background-color: $hoverColor;
+        color: white;
+      }
+    }
+  }
+
+  .service {
+    display: flex;
+
+    ul {
+      display: flex;
+      padding: 0;
+
+      li {
+        margin-right: 10px;
+      }
+
+      a:hover {
+        color: $hoverColor;
+
+      }
+    }
+
+  }
+
+  .snsLogin {
+
+    div {
+      border: 1px solid rgb(0, 0, 0);
+      height: 40px;
+      line-height: 40px;
+      margin-bottom: 10px;
+
+      i {
+        margin: 0 10px;
+      }
+
+      &:hover {
+        background-color: $hoverColor;
+        color: white;
+      }
+    }
+  }
+
+  &.active{
+    display: flex;
+  }
+}
+
+.certification {
+  border: 1px solid  #333;
+  text-align: center;
+  margin: 10px auto;
+  display: none;
+  p{
+    margin: 10px 0;
+  }
+
+  .simple_Login {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    padding: 10px;
+    .type {
+      border: 1px solid #333;
+      width: 120px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      &:hover{
+        background-color: $hoverColor;
+      }
+    }
+  }
+
+}
+.certification.active{
+  display: block;
+}
+
+footer {
+  border: 1px solid $reservationColor;
+}

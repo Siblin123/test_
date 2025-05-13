@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYWA로그인</title>
+  <!-- 폰트 어썸 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+  <header class="header inner">
+    <img src="img/logo1.png" alt="">
+
+    <div class="tap">
+      <p><a href="" id="simple_Login" class="active">간편인증</a></p>
+      <p><a href="" id="id_Login">아이디 로그인</a></p>
+    </div>
+  </header>
+
+  <div class="login_Menu inner ">
+    
+    <input type="text" placeholder="아이디 또는 전화번호" class="id">
+    <input type="password" placeholder="비밀번호" class="password">
+
+    <div class="keepLoggedIn">
+      <input type="checkbox" id="checkBox">
+      <label for="checkBox">로그인상태유지</label>
+  
+    </div>
+
+    <div class="login_Btn">
+      <button>로그인</button>
+    </div>
+    <div class="service">
+      <ul>
+        <a href=""><li>비밀번호 찾기</li></a>
+        <a href=""><li>아이디 찾기</li></a>
+        <a href=""><li>회원가입</li></a>
+      </ul>
+    </div>
+
+    
+  <div class="snsLogin">
+     <div class="Google_"><i class="fa-brands fa-google"></i>구글계정 로그인</div>
+     <div class="Naver_"><i class="fa-brands fa-x-twitter"></i>트위터계정 로그인</div>
+     <div class="Meta_"><i class="fa-brands fa-meta"></i>메타계정 로그인</div>
+  </div>
+  </div>
+
+  <!-- 간편인증 -->
+  <div class="certification inner active">
+    <p>간편인증</p>
+    <div class="simple_Login">
+      <div class="type">QR</div>
+      <div class="type">토스</div>
+      <div class="type">카카오톡</div>
+      <div class="type">네이버</div>
+      <div class="type">패스</div>
+    </div>
+
+  </div>
+  <footer class="inner">
+    <p>※ 청소년활동 관련 통합회원 서비스 안내 <br> 회원 관련 문의 : 02-330-2826</p>
+
+    <p>※ KYWA 통합예약(국립수련원 캠프·시설예약, 특별지원청소년활동, 학교단체 사전예약 등)은 로그인 후 메뉴를 이용해주세요.</p>
+  </footer>
+
+  <script src="javaScript/login.js"></script>
+</body>
+
+</html>

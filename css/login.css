@@ -1,0 +1,160 @@
+* {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.inner {
+  margin: auto;
+  width: 400px;
+}
+
+.header {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header img {
+  width: 150px;
+}
+.header .tap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.header .tap a {
+  position: relative;
+  width: 100%;
+}
+.header .tap a.active::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border: 1px solid rgb(238, 7, 7);
+}
+.header .tap a:hover {
+  color: #E06D5C;
+}
+
+.login_Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+}
+.login_Menu .id,
+.login_Menu .password {
+  height: 50px;
+  margin-bottom: 10px;
+}
+.login_Menu .keepLoggedIn {
+  margin-bottom: 10px;
+}
+.login_Menu .keepLoggedIn :hover {
+  color: #E06D5C;
+}
+.login_Menu .login_Btn {
+  border: 1px solid #000;
+}
+.login_Menu .login_Btn button {
+  width: 100%;
+  border: none;
+  height: 40px;
+}
+.login_Menu .login_Btn button:hover {
+  background-color: #E06D5C;
+  color: white;
+}
+.login_Menu .service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.login_Menu .service ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+.login_Menu .service ul li {
+  margin-right: 10px;
+}
+.login_Menu .service ul a:hover {
+  color: #E06D5C;
+}
+.login_Menu .snsLogin div {
+  border: 1px solid rgb(0, 0, 0);
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+.login_Menu .snsLogin div i {
+  margin: 0 10px;
+}
+.login_Menu .snsLogin div:hover {
+  background-color: #E06D5C;
+  color: white;
+}
+.login_Menu.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.certification {
+  border: 1px solid #333;
+  text-align: center;
+  margin: 10px auto;
+  display: none;
+}
+.certification p {
+  margin: 10px 0;
+}
+.certification .simple_Login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 7px;
+  padding: 10px;
+}
+.certification .simple_Login .type {
+  border: 1px solid #333;
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.certification .simple_Login .type:hover {
+  background-color: #E06D5C;
+}
+
+.certification.active {
+  display: block;
+}
+
+footer {
+  border: 1px solid #FF9494;
+}
