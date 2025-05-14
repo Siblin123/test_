@@ -102,6 +102,6 @@
 
 ## 🚀 링크
 
-- [기획](http//:www.naver.com)
+- [기획]([http//:www.naver.com](https://www.naver.com/))
 - [디자인]()
 - [DEMO]()\
