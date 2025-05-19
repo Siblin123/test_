@@ -19,8 +19,10 @@ main {
     margin: 0;
     margin: 100px auto;
     text-align: center;
+
     .title_Content {
       position: relative;
+
       &::after {
         position: absolute;
         content: "";
@@ -68,19 +70,19 @@ main {
       .col1 {
         width: 15%;
       }
-      
+
       .col2 {
         width: 50%;
       }
-      
+
       .col3 {
         width: 15%;
       }
-      
+
       .col4 {
         width: 20%;
       }
-      
+
 
 
       thead {
@@ -121,7 +123,7 @@ main {
       }
 
       .notification {
-        background-color: #E06D5C;
+        background-color: #cc4646;
       }
     }
 
@@ -130,23 +132,28 @@ main {
       justify-content: center;
       margin-top: 10px;
       width: 100%;
+      margin-bottom: 10px;
+      &>a{
+        transform: translateY(5px);
+      }
       span {
         padding: 10px;
       }
 
       ul {
-      border: 1px solid #000;
         width: 300px;
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
         flex-wrap: wrap;
+        // border: 1px solid #000;
         li {
           border-radius: 5px;
           width: 30px;
           height: 30px;
           line-height: 30px;
-          margin: 0 10px ;
+          margin: 0 10px;
+
           &.active {
             background-color: $mainColor;
           }
@@ -159,33 +166,33 @@ main {
 
   @media (max-width:800px) {
 
-    .data{
-      .col1 {
-      }
-      
-      .col2 {
-      }
-      
-      .col3 {
-      }
-      
-      .col4 {
-      }
-      
-    }
-   
-
-    .page_Box {
 
 
 
-    
-    }
 
-    .SubPage{
-      width: 80%;
+    .page_Box {}
+
+    .SubPage {
+      width: 90%;
       margin: auto !important;
-      padding: 0 !important ;
+      padding: 0 !important;
+
+      .data {
+
+        th:nth-child(3),
+        td:nth-child(3) {
+          display: none;
+
+        }
+
+        .col1 {width:1%; border: 1px solid #000;}
+
+        .col2 {width: 79%; border: 1px solid rgb(197, 78, 78);}
+
+
+        .col3 {width: 20%; border: 1px solid rgb(24, 57, 202);}
+
+      }
     }
   }
 }

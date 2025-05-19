@@ -5,7 +5,6 @@ let pagenation = document.querySelector(".pagenation");
 let pageCount = Math.ceil(rows.length / rowMaxCount); //모든 페이지 수 + 반올림
 let pageMaxCount = 5; // 최대 페이지 수
 let CurBefore_NextNum = 0;
-
 //Start()
 for (let i = 1; i <= pageCount; i++) //처음 시작시 페이지네이션 추가해주기
 {
@@ -93,6 +92,7 @@ function Before_Next_Btn() {
   BeforeBtn.addEventListener("click", function (e) {
     e.preventDefault(); // a 태그 등의 기본 동작 막기
     CurBefore_NextNum--;
+        VeiwRows(CurBefore_NextNum * pageMaxCount);
     VeiePageNation(CurBefore_NextNum);
 
     if (CurBefore_NextNum == 0) { BeforeBtn.style.opacity = 0; console.log("이전삭제")}
@@ -112,6 +112,7 @@ function Before_Next_Btn() {
       return;
 
     CurBefore_NextNum++;
+    VeiwRows(CurBefore_NextNum * pageMaxCount);
     VeiePageNation(CurBefore_NextNum);
     // 다음 페이지 로직
     if (CurBefore_NextNum == 0) { BeforeBtn.style.opacity = 0; console.log("이전1삭제")}

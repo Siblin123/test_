@@ -72,6 +72,9 @@
         object-fit: contain;
     }
 
+    .top_Mobile:hover{
+        cursor: pointer;
+    }
     .close_Btn {
         position: absolute;
         right: 20px;
@@ -332,6 +335,10 @@
     .Story_inner {
         width: 100%;
 
+    }
+
+    .Story_inner>img{
+        display: none;
     }
 
     .Story_inner .cardwraps {

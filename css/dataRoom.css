@@ -87,7 +87,7 @@ main .SubPage .data tr::after {
   width: 99.5%;
 }
 main .SubPage .data .notification {
-  background-color: #E06D5C;
+  background-color: #cc4646;
 }
 main .SubPage .page_Box {
   display: -webkit-box;
@@ -98,12 +98,16 @@ main .SubPage .page_Box {
           justify-content: center;
   margin-top: 10px;
   width: 100%;
+  margin-bottom: 10px;
+}
+main .SubPage .page_Box > a {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 main .SubPage .page_Box span {
   padding: 10px;
 }
 main .SubPage .page_Box ul {
-  border: 1px solid #000;
   width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,8 +131,24 @@ main .SubPage .page_Box ul li.active {
 }
 @media (max-width: 800px) {
   main .SubPage {
-    width: 80%;
+    width: 90%;
     margin: auto !important;
     padding: 0 !important;
+  }
+  main .SubPage .data th:nth-child(3),
+  main .SubPage .data td:nth-child(3) {
+    display: none;
+  }
+  main .SubPage .data .col1 {
+    width: 1%;
+    border: 1px solid #000;
+  }
+  main .SubPage .data .col2 {
+    width: 79%;
+    border: 1px solid rgb(197, 78, 78);
+  }
+  main .SubPage .data .col3 {
+    width: 20%;
+    border: 1px solid rgb(24, 57, 202);
   }
 }
